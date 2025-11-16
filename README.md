@@ -38,9 +38,9 @@ jogo-adivinha
 
 1. **Pense** em um número entre 1 e 63 
 2. **Responda** `s` ou `n` para cada cartela que aparecer
-3. **Veja** o programa adivinhar seu número em 6 perguntas!
+3. **Veja** O programa vai adivinhar seu número com poucas perguntas
 
-##Atualização
+## Atualização
 
 Para atualizar para a versão mais recente:
 

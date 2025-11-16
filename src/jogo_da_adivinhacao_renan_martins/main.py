@@ -1,7 +1,15 @@
 import time
-from cartelas import geraCartelas, exibeCartela
-from validacao import validaRespostaUsuario, verificaContinuacao
-from exibicao import exibeMensagemFinal, exibeMensagemInicial, exibeValorEscolhido
+from src.jogo_da_adivinhacao_renan_martins.cartelas import geraCartelas, exibeCartela
+from src.jogo_da_adivinhacao_renan_martins.validacao import (
+    validaRespostaUsuario,
+    verificaContinuacao,
+)
+from src.jogo_da_adivinhacao_renan_martins.exibicao import (
+    exibeMensagemFinal,
+    exibeMensagemInicial,
+    exibeValorEscolhido,
+)
+
 
 def main():
 

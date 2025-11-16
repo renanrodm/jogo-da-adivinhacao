@@ -1,5 +1,7 @@
 """Módulo responsável pela interface e mensagens do jogo"""
-from config import VERSION
+
+from src.jogo_da_adivinhacao_renan_martins.config import VERSION
+
 
 def exibeMensagemInicial():
     print("*" * 63)
@@ -18,12 +20,14 @@ def exibeMensagemInicial():
     print("*" * 63)
     input("\nPensou? tecle ENTER...")
 
+
 def exibeValorEscolhido(valor):
     print("\n" + "*" * 63)
     print("*" + " " * 61 + "*")
     print("*" + f"ATENÇÃO! O valor escolhido foi: {valor}".center(61) + "*")
     print("*" + " " * 61 + "*")
     print("*" * 63)
+
 
 def exibeMensagemFinal():
     print("*" * 63)

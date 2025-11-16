@@ -16,6 +16,7 @@ def geraCartelas():
 
     return cartelas
 
+
 def exibeCartela(cartela, n):
 
     print(f"\nCartela {n+1}")
