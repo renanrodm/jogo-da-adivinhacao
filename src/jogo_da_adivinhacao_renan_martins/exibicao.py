@@ -1,6 +1,6 @@
 """Módulo responsável pela interface e mensagens do jogo"""
 
-from src.jogo_da_adivinhacao_renan_martins.config import VERSION
+from jogo_da_adivinhacao_renan_martins.config import VERSION
 
 
 def exibeMensagemInicial():
