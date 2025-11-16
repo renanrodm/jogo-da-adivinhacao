@@ -4,12 +4,11 @@
 [![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Um joguinho clássico direto no terminal: você pensa em um número entre **1 e 63** e o programa descobre qual é só fazendo algumas perguntas.  
-Simples, rápido e divertido — aquele tipo de parada que qualquer pessoa pode rodar sem dor de cabeça.
+Jogo direto no terminal: você pensa em um número entre **1 e 63** e o programa descobre qual é só fazendo algumas perguntas.  
 
 ---
 
-## ✅ Instalação
+## Instalação
 
 ### Linux/Mac (bash)
 
@@ -25,7 +24,7 @@ pip install jogo-da-adivinhacao-renan-martins
 
 ---
 
-## 💻 Como executar
+##Como executar
 
 Depois de instalar, é só rodar:
 
@@ -35,13 +34,13 @@ jogo-adivinha
 
 ---
 
-## 🎮 Como jogar
+##Como jogar
 
 1. **Pense** em um número entre 1 e 63 
 2. **Responda** `s` ou `n` para cada cartela que aparecer
 3. **Veja** o programa adivinhar seu número em 6 perguntas!
 
-## 🔧 Atualização
+##Atualização
 
 Para atualizar para a versão mais recente:
 
@@ -51,20 +50,20 @@ pip install --upgrade jogo-da-adivinhacao-renan-martins
 
 ---
 
-## 🧠 Como funciona?
+##Como funciona?
 
 O jogo usa **representação binária** dos números:
 - Cada cartela representa um bit específico
 - Suas respostas "montam" o número em binário
-- Resultado: adivinhação garantida em apenas 6 perguntas!
 
 **Exemplo:** Se você pensou em **13**:
 - Binário: `1101`
 - Temos 3 bits ligados (1) e 1 bit desligado (0)
-- Cartela 1 (1): Sim ✓
-- Cartela 2 (2): Não ✗
-- Cartela 3 (4): Sim ✓
-- Cartela 4 (8): Sim ✓
+- Olhando da direita para esquerda:
+    - Cartela 1 (1): Sim ✓
+    - Cartela 2 (2): Não ✗
+    - Cartela 3 (4): Sim ✓
+    - Cartela 4 (8): Sim ✓
 - Somando os valores das cartelas respondidas com "Sim": 1 + 4 + 8 = **13** ✓
 
 ---
