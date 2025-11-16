@@ -1,66 +1,40 @@
-def geraCartelas():
-
-    cartelas = [[], [], [], [], [], []]
-
-    for i in range(1, 64):
-        prox = i
-
-        for cartela in cartelas:
-            if prox % 2 == 1:
-                cartela.append(i)
-
-            prox = prox // 2
-
-    return cartelas
+import time
+from cartelas import geraCartelas, exibeCartela
+from validacao import validaRespostaUsuario, verificaContinuacao
+from exibicao import exibeMensagemFinal, exibeMensagemInicial, exibeValorEscolhido
 
 
-def exibeCartela(cartela, n):
-
-    print(f"\nCartela {n+1}")
-
-    for pos, n in enumerate(cartela):
-        print(str(n).rjust(2), end=" ")
-
-        if (pos + 1) % 8 == 0:
-            print()
+        
+version = "0.1.6"
 
 
-def exibeMensagemInicial():
-    print("*" * 63)
-    print("*", "Jogo da Adivinhação | Versão 0.1.6".center(60), end="*")
-    print(
-        "\n*",
-        "Pense em um inteiro de 1 a 63 e não conte pra ninguém!".center(60),
-        end="*",
-    )
-    print(
-        "\n*",
-        "Em seguida, tecle ENTER para continuar... e boa sorte!".center(60),
-        end="*",
-    )
-    print("\n*", "*".rjust(61))
-    print("*" * 63)
 
 
-def start():
-    exibeMensagemInicial()
+def main():
 
-    cartelas = geraCartelas()
+    while True:
+        exibeMensagemInicial()
 
-    valorEscolhido = 0
-    for pos, cartela in enumerate(cartelas):
+        cartelas = geraCartelas()
 
-        exibeCartela(cartela, pos)
+        valorEscolhido = 0
 
-        while True:
-            resp = input("\nO valor escolhido está nessa cartela (s/n)?: ")
+        for pos, cartela in enumerate(cartelas):
 
-            if resp.lower() not in ("s", "n"):
-                print("Por favor, digite apenas 's' ou 'n'")
-            else:
-                break
-            
-        if resp == "s":
-            valorEscolhido += cartela[0]
+            exibeCartela(cartela, pos)
 
-    print(f"\nAtenção! O valor escolhido foi....... {valorEscolhido}!!!!!")
+            if validaRespostaUsuario():
+                valorEscolhido += cartela[0]
+
+        exibeValorEscolhido(valorEscolhido)
+
+        if not verificaContinuacao():
+            break
+
+    time.sleep(3)
+    print()
+    exibeMensagemFinal()
+
+
+if __name__ == "__main__":
+    main()
