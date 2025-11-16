@@ -1,0 +1,21 @@
+[project]
+name = "jogo-da-adivinhacao-renan-martins"
+version = "0.1.1"
+description = ""
+authors = [
+    {name = "Renan Martins",email = "renanrodm@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "jogo_da_adivinhacao_renan_martins", from = "src"}]
+
+[tool.poetry.scripts]
+jogo-adivinha = "jogo_da_adivinhacao_renan_martins.main:start"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
