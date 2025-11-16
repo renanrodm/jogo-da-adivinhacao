@@ -3,13 +3,6 @@ from cartelas import geraCartelas, exibeCartela
 from validacao import validaRespostaUsuario, verificaContinuacao
 from exibicao import exibeMensagemFinal, exibeMensagemInicial, exibeValorEscolhido
 
-
-        
-version = "0.1.6"
-
-
-
-
 def main():
 
     while True:
