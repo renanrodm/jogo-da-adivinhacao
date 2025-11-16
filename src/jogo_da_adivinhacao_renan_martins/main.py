@@ -27,7 +27,7 @@ def exibeCartela(cartela, n):
 
 def exibeMensagemInicial():
     print("*" * 63)
-    print("*", "Jogo da Adivinhação".center(60), end="*")
+    print("*", "Jogo da Adivinhação | Versão 0.1.5".center(60), end="*")
     print(
         "\n*",
         "Pense em um inteiro de 1 a 63 e não conte pra ninguém!".center(60),
@@ -52,8 +52,14 @@ def main():
 
         exibeCartela(cartela, pos)
 
-        resp = input("\nO valor escolhido está nessa cartela (s/n)?: ")
+        while True:
+            resp = input("\nO valor escolhido está nessa cartela (s/n)?: ")
 
+            if resp.lower() not in ("s", "n"):
+                print("Por favor, digite apenas 's' ou 'n'")
+            else:
+                break
+            
         if resp == "s":
             valorEscolhido += cartela[0]
 
