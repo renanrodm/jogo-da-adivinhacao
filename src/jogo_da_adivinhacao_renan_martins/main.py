@@ -1,7 +1,7 @@
 def geraCartelas():
-    
-    cartelas = [[],[],[],[],[],[]]
-    
+
+    cartelas = [[], [], [], [], [], []]
+
     for i in range(1, 64):
         prox = i
 
@@ -13,34 +13,43 @@ def geraCartelas():
 
     return cartelas
 
+
 def exibeCartela(cartela, n):
 
     print(f"\nCartela {n+1}")
 
     for pos, n in enumerate(cartela):
-        print(str(n).rjust(2), end=' ')
+        print(str(n).rjust(2), end=" ")
 
-        if (pos+1) % 8 == 0:
+        if (pos + 1) % 8 == 0:
             print()
-        
-        
+
+
 def exibeMensagemInicial():
     print("*" * 63)
     print("*", "Jogo da Adivinhação".center(60), end="*")
-    print("\n*","Pense em um inteiro de 1 a 63 e não conte pra ninguém!".center(60), end="*")
-    print("\n*","Em seguida, tecle ENTER para continuar... e boa sorte!".center(60), end="*")
+    print(
+        "\n*",
+        "Pense em um inteiro de 1 a 63 e não conte pra ninguém!".center(60),
+        end="*",
+    )
+    print(
+        "\n*",
+        "Em seguida, tecle ENTER para continuar... e boa sorte!".center(60),
+        end="*",
+    )
     print("\n*", "*".rjust(61))
     print("*" * 63)
 
 
-def start():
+def main():
     exibeMensagemInicial()
 
     cartelas = geraCartelas()
 
     valorEscolhido = 0
     for pos, cartela in enumerate(cartelas):
-        
+
         exibeCartela(cartela, pos)
 
         resp = input("\nO valor escolhido está nessa cartela (s/n)?: ")
