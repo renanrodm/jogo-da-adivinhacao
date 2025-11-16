@@ -1,5 +1,9 @@
 import time
-from jogo_da_adivinhacao_renan_martins.cartelas import geraCartelas, exibeCartela
+import os
+from jogo_da_adivinhacao_renan_martins.cartelas import (
+    geraCartelas, 
+    exibeCartela,
+)
 from jogo_da_adivinhacao_renan_martins.validacao import (
     validaRespostaUsuario,
     verificaContinuacao,
@@ -11,9 +15,19 @@ from jogo_da_adivinhacao_renan_martins.exibicao import (
 )
 
 
+def limpaTerminal():
+
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+
 def main():
 
     while True:
+        limpaTerminal()
+
         exibeMensagemInicial()
 
         cartelas = geraCartelas()
