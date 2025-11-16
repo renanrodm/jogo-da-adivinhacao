@@ -27,7 +27,7 @@ def exibeCartela(cartela, n):
 
 def exibeMensagemInicial():
     print("*" * 63)
-    print("*", "Jogo da Adivinhação | Versão 0.1.5".center(60), end="*")
+    print("*", "Jogo da Adivinhação | Versão 0.1.6".center(60), end="*")
     print(
         "\n*",
         "Pense em um inteiro de 1 a 63 e não conte pra ninguém!".center(60),
@@ -42,7 +42,7 @@ def exibeMensagemInicial():
     print("*" * 63)
 
 
-def main():
+def start():
     exibeMensagemInicial()
 
     cartelas = geraCartelas()
