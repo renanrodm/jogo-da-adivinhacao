@@ -24,7 +24,7 @@ pip install jogo-da-adivinhacao-renan-martins
 
 ---
 
-##Como executar
+## Como executar
 
 Depois de instalar, é só rodar:
 
@@ -34,7 +34,7 @@ jogo-adivinha
 
 ---
 
-##Como jogar
+## Como jogar
 
 1. **Pense** em um número entre 1 e 63 
 2. **Responda** `s` ou `n` para cada cartela que aparecer
@@ -50,7 +50,7 @@ pip install --upgrade jogo-da-adivinhacao-renan-martins
 
 ---
 
-##Como funciona?
+## Como funciona?
 
 O jogo usa **representação binária** dos números:
 - Cada cartela representa um bit específico
@@ -60,15 +60,15 @@ O jogo usa **representação binária** dos números:
 - Binário: `1101`
 - Temos 3 bits ligados (1) e 1 bit desligado (0)
 - Olhando da direita para esquerda:
-    - Cartela 1 (1): Sim ✓
-    - Cartela 2 (2): Não ✗
-    - Cartela 3 (4): Sim ✓
-    - Cartela 4 (8): Sim ✓
-- Somando os valores das cartelas respondidas com "Sim": 1 + 4 + 8 = **13** ✓
+    - Cartela 1 (1): Sim 
+    - Cartela 2 (2): Não
+    - Cartela 3 (4): Sim
+    - Cartela 4 (8): Sim
+- Somando os primeiros valores das cartelas respondidas com "Sim": 1 + 4 + 8 = **13** ✓
 
 ---
 
-## 📦 Links úteis
+## Links úteis
 
 - **PyPI:** https://pypi.org/project/jogo-da-adivinhacao-renan-martins/
 - **Repositório:** https://github.com/renanrodm/jogo-da-adivinhacao
@@ -76,11 +76,9 @@ O jogo usa **representação binária** dos números:
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Renan Martins**  
 - renanrodm@gmail.com  
 - [@renanrodm](https://github.com/renanrodm)
 - Desenvolvido como projeto educacional
-
----
