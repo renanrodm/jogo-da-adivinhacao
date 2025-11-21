@@ -10,19 +10,27 @@ Jogo direto no terminal: você pensa em um número entre **1 e 63** e o programa
 
 ## Instalação
 
-### Linux/Mac (bash)
+### Opção 1: Usando pipx (Recomendado)
+
+O `pipx` instala o programa em um ambiente isolado:
+
+```bash
+# Instalar pipx (se não tiver)
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+
+# Instalar o jogo
+pipx install jogo-da-adivinhacao-renan-martins
+
+# Executar
+jogo-adivinha
+```
+
+### Opção 2: Usando pip
 
 ```bash
 pip install jogo-da-adivinhacao-renan-martins
-```
-
-### Windows (PowerShell)
-
-```powershell
-pip install jogo-da-adivinhacao-renan-martins
-```
-
----
+jogo-adivinha
 
 ## Como executar
 
