@@ -1,6 +1,6 @@
 [project]
 name = "jogo-da-adivinhacao-renan-martins"
-version = "0.1.12"
+version = "0.1.13"
 description = ""
 authors = [
     {name = "Renan Martins",email = "renanrodm@gmail.com"}
@@ -29,6 +29,13 @@ jogo-adivinha = "jogo_da_adivinhacao_renan_martins.main:main"
 test = "pytest --cov=src/jogo_da_adivinhacao_renan_martins --cov-report html"
 format = "black src/ tests/"
 lint = "flake8 src/ tests/"
+patch = "poetry version patch"
+minor = "poetry version minor"
+major = "poetry version major"
+clean = "rm -rf dist/ build/ *.egg-info"
+build = "task clean && poetry build"
+publish = "task build && poetry publish"
+release = "task patch && task publish"
 
 
 [build-system]
