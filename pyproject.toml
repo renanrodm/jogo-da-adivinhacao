@@ -1,14 +1,15 @@
 [project]
 name = "jogo-da-adivinhacao-renan-martins"
-version = "0.1.11"
+version = "0.1.12"
 description = ""
 authors = [
     {name = "Renan Martins",email = "renanrodm@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13,<4.0"
+requires-python = ">=3.12,<4.0"
 dependencies = [
 ]
+
 
 [tool.poetry]
 packages = [{include = "jogo_da_adivinhacao_renan_martins", from = "src"}]
